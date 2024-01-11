@@ -1,0 +1,73 @@
+
+
+<mat-card class="card" >
+  <mat-card-content>
+    <mat-toolbar >
+      <span><h1>Form Builder</h1></span>
+    </mat-toolbar>
+     
+    <mat-form-field >
+      <mat-label>Element Name</mat-label>
+      <input matInput name="elementName" [(ngModel)]="elementName">
+    </mat-form-field>
+    
+    <mat-form-field class="elementtype"  >
+      <mat-label>Element Type</mat-label>
+      <mat-select name="elementType" [(ngModel)]="elementType" >
+        <mat-option value="select" >Select</mat-option>
+        <mat-option value="text">Text</mat-option>
+        <mat-option value="email">email</mat-option>
+        <mat-option value="password">password</mat-option>
+        
+      </mat-select>
+    </mat-form-field>
+    <!-- for choice select others  -->
+    <div *ngIf="elementType==='select'">
+      <mat-form-field>
+        <input matInput placeholder="Enter Element type" name="inputField" [(ngModel)]="enteredValue">
+      </mat-form-field>
+      <button mat-button color="primary" (click)="addchoice()" class="btnchoice">Add choice</button>
+    </div>
+
+    
+    
+    <h3 class="radio-label">Select below for Requirment:</h3>
+    <mat-radio-group aria-label="Select an option" name="radioElement" [(ngModel)]="radioElement">
+      <mat-radio-button value="yes">Yes</mat-radio-button>
+      <mat-radio-button value="no">No </mat-radio-button>
+    </mat-radio-group>
+    
+    <div class="box">
+      <div class="example-button-row">
+        <button mat-button color="primary" (click)="add()">Add Field</button>
+        </div>
+        
+        
+         <div class="example-button-row">
+          <button mat-button color="primary" (click)="handleClick()">Generate form Code</button>
+          </div>
+          <div class="example-button-row">
+           
+              <button mat-button color="primary" (click)="viewForm()">Go to form</button>
+            
+            
+            </div>
+    </div>
+  
+    
+  </mat-card-content>
+</mat-card>
+<app-form [datafromparent]="formdata"></app-form>
+
+<div></div>
+<app-codetemplate *ngIf="toggle===true" [fields]="formdata"></app-codetemplate>
+
+
+<app-formgenerate *ngIf="flag==true" [datafromparent]="formdata"></app-formgenerate>
+
+
+
+<router-outlet></router-outlet>
+
+
+

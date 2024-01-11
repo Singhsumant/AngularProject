@@ -1,0 +1,26 @@
+<!-- 
+
+<mat-card class="card">
+    
+    <mat-card-content>
+      <h1>Form</h1>
+        <div *ngFor="let item of datafromparent">
+            <label for="{{ item.elementName }}">{{ item.elementName }}</label><br/>
+            <input 
+              type="{{ item.elementType }}" 
+              [required]="item.radioElement === 'yes'" 
+              id="{{ item.elementName }}" 
+              name="{{ item.elementName }}"
+
+              [pattern]="item.elementType === 'email' ? '^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}$' : null"
+
+            >
+            <!-- <div *ngIf="item.elementType === 'email' && formName.controls[item.elementName]?.hasError('pattern')">
+              Invalid email format
+            </div> -->
+        <!-- </div>
+        <button mat-button color="primary" class="btnsubmit">Submit</button>
+
+      </mat-card-content>
+  </mat-card>
+ --> -->

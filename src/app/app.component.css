@@ -1,0 +1,71 @@
+mat-toolbar {
+    /* display: flex; */
+    /* align-items: center; */
+    justify-content: center;
+    /* height: 64px; */
+    background-color: antiquewhite;
+    /* width: 450px; */
+    margin-bottom: 5px;
+    border-radius: 2px;
+  }
+  .radio-label{
+    background-color: beige;
+    color: black;
+    padding-right: 100px;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    
+    
+  }
+  span {
+    /* font-size: 4em; */
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    margin-bottom: 2px;
+    
+    
+  }
+  :host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+    background-color: rgb(163, 217, 163);
+    margin-left: 3px;
+    margin-top: 5px;
+    
+  }
+  .box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+  }
+  .card{
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    background-color: azure;
+    align-items: center;
+    /* text-align: center; */
+    width: 800px;
+    align-self: center;
+    background-color: burlywood;
+  }
+  .elementtype{
+    margin-left: 24px;
+  }
+  .btnchoice{
+    margin: 10px;
+    background-color: black;
+    
+  }
+ 
+  

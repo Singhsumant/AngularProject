@@ -1,0 +1,44 @@
+<!-- <p *ngFor="let item of datafromparent">{{item.elementName}}</p> -->
+
+<!--  
+<table class="table">
+    <thead class="head">
+      <tr >
+        <th>Element Name</th>
+        <th>Element Type</th>
+        <th>Required</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of datafromparent">
+          <td>{{ item.elementName }}</td>
+          <td>{{ item.elementType }}</td>
+          <td>{{ item.radioElement }}</td>
+      </tr>
+    </tbody>
+</table> -->
+
+<mat-card class="card">
+    <mat-card-content>
+        <h2>Added Elements</h2>
+        <table class="table">
+            <thead class="head">
+              <tr >
+                <th>Element Name</th>
+                <th>Element Type</th>
+                <th>Options</th>
+                <th>Required</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of datafromparent">
+                  <td>{{ item.elementName }}</td>
+                  <td>{{ item.elementType }}</td>
+                  <td>{{ item.option }}</td>
+                  <td>{{ item.radioElement }}</td>
+              </tr>
+            </tbody>
+        </table>
+
+    </mat-card-content>
+  </mat-card>

@@ -1,0 +1,29 @@
+
+
+<mat-card class="parentcard">
+    <mat-card-content>
+        &lt;form&gt;
+        <div  *ngFor="let item of fields">
+            
+           &lt;label for=&quot;{{item.elementName}}&quot;&gt;
+            &lt;/label&gt;<br/>
+            <div *ngIf="item.elementType === 'select'; else noOption">
+              &lt;select name="example_{{ item.elementName }}" id="example_{{
+                item.elementType
+              }}" required&gt;
+              <div class="opt" *ngFor="let option of item.option">
+                &lt;option value ="option"&gt;
+                {{ option }}
+                &lt;/option&gt;
+              </div>
+              &lt;/select&gt;
+            </div>
+          <ng-template #noOption>
+            &lt;input type=&quot;{{item.elementType}}&quot; {{item.radioElement=="yes"?"'required'":''}}&gt;&lt;/input&gt;
+          </ng-template>
+
+          &lt;/form&gt;
+        </div>
+    </mat-card-content>
+  </mat-card>
+  

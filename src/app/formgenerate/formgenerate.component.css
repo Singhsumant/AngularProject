@@ -1,0 +1,14 @@
+.card{
+    align-self: center;
+    width: 800px;
+    margin-left: 390px;
+    background-color: azure;
+    color: black;
+    margin-top: 10px;
+}
+.btnsubmit{
+    background-color: darkgray;
+    color:blue;
+    margin: 5px;
+
+}
